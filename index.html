@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemRyx Studio</title>
+    <style>
+        /* ========== 全局重置与基础样式 ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ========== 头部区域 ========== */
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(180deg, #1a1a2e 0%, #0d0d0d 100%);
+        }
+
+        /* 工作室 Logo 文字 */
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        /* 品牌强调色 */
+        header h1 span {
+            color: #00d4ff;
+        }
+
+        /* 工作室标语 */
+        header p.tagline {
+            font-size: 1.15rem;
+            color: #aaaaaa;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ========== 主内容区域 ========== */
+        main {
+            flex: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        /* 区域标题 */
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #00d4ff;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* ========== 游戏卡片网格 ========== */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* 单个游戏卡片 */
+        .game-card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid #2a2a2a;
+        }
+
+        .game-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.1);
+        }
+
+        /* 游戏图标 */
+        .game-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            object-fit: cover;
+            margin: 0 auto 16px;
+            display: block;
+            background: #2a2a2a;
+        }
+
+        /* 游戏名称 */
+        .game-card h3 {
+            font-size: 1.25rem;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        /* 游戏描述 */
+        .game-card p.game-desc {
+            font-size: 0.9rem;
+            color: #999999;
+            text-align: center;
+            margin-bottom: 20px;
+            min-height: 40px;
+        }
+
+        /* 下载按钮容器 */
+        .download-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* 下载按钮通用样式 */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: opacity 0.2s ease;
+        }
+
+        .download-btn:hover {
+            opacity: 0.85;
+        }
+
+        /* Google Play 按钮 */
+        .btn-google {
+            background: #1a7a1a;
+            color: #ffffff;
+        }
+
+        /* App Store 按钮 */
+        .btn-apple {
+            background: #333333;
+            color: #ffffff;
+        }
+
+        /* 按钮中的图标（使用 SVG 内联） */
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* ========== 联系方式区域 ========== */
+        .contact-section {
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 40px;
+        }
+
+        .contact-section p {
+            color: #888888;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-section a.email-link {
+            color: #00d4ff;
+            font-size: 1.05rem;
+            transition: color 0.2s ease;
+        }
+
+        .contact-section a.email-link:hover {
+            color: #66e5ff;
+        }
+
+        /* ========== 页脚 ========== */
+        footer {
+            text-align: center;
+            padding: 24px 20px;
+            border-top: 1px solid #1a1a1a;
+            color: #555555;
+            font-size: 0.8rem;
+        }
+
+        /* ========== 响应式适配 ========== */
+        @media (max-width: 640px) {
+            header h1 {
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+
+            header p.tagline {
+                font-size: 1rem;
+            }
+
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== 头部：工作室介绍 ==================== -->
+    <header>
+        <!-- 工作室名称，Gem 用强调色高亮 -->
+        <h1><span>Gem</span>Ryx</h1>
+        <p class="tagline">We craft games that entertain players around the world.</p>
+    </header>
+
+    <!-- ==================== 主内容：游戏展示 ==================== -->
+    <main>
+        <h2 class="section-title">Our Games</h2>
+
+        <div class="games-grid">
+
+            <!--
+                ============================================================
+                游戏卡片模板 - 添加新游戏时复制整个 <div class="game-card"> 块
+                ============================================================
+                使用说明：
+                1. 将游戏图标放入 images/ 文件夹（建议 200x200 PNG）
+                2. 修改 <img> 的 src 为实际图标路径
+                3. 修改 <h3> 为游戏名称
+                4. 修改 <p class="game-desc"> 为游戏简介
+                5. 替换 Google Play 和 App Store 的 href 链接
+                6. 如果某个平台暂未上线，可删除对应按钮
+                ============================================================
+            -->
+
+            <!-- 游戏卡片 1：示例（请替换为实际游戏信息） -->
+            <div class="game-card">
+                <!-- 替换 src 为实际游戏图标路径，例如 images/game1-icon.png -->
+                <img class="game-icon" src="images/game1-icon.png" alt="Game 1 Icon">
+                <!-- 替换为实际游戏名称 -->
+                <h3>Game Title 1</h3>
+                <!-- 替换为实际游戏描述 -->
+                <p class="game-desc">A brief description of your awesome game goes here.</p>
+                <div class="download-links">
+                    <!-- 替换 href 为实际 Google Play 链接 -->
+                    <a class="download-btn btn-google" href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.372 2.372 0 0 1-.86-1.829V3.643c0-.723.33-1.37.859-1.83zM14.852 13.06l2.944 1.7-2.378 2.377-3.625-3.625 3.06-2.452zm3.677 2.12l3.395 1.96a1.186 1.186 0 0 1 0 2.054l-3.396 1.96-2.646-2.646 2.647-3.328zm-4.238-4.238L17.937 7.3l-3.396-1.96a1.186 1.186 0 0 0 0-2.054L17.937.326l2.646 2.646-6.292 8.97zM4.67.855L14.29 5.41l-2.944 1.7L4.67.855z"/></svg>
+                        Google Play
+                    </a>
+                    <!-- 替换 href 为实际 App Store 链接 -->
+                    <a class="download-btn btn-apple" href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        App Store
+                    </a>
+                </div>
+            </div>
+
+            <!--
+                ============================================================
+                复制上方 <div class="game-card">...</div> 块来添加更多游戏
+                ============================================================
+                示例：取消下方注释并修改信息即可添加第二个游戏
+            -->
+
+            <!--
+            <div class="game-card">
+                <img class="game-icon" src="images/game2-icon.png" alt="Game 2 Icon">
+                <h3>Game Title 2</h3>
+                <p class="game-desc">Another amazing game description here.</p>
+                <div class="download-links">
+                    <a class="download-btn btn-google" href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME_2" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.372 2.372 0 0 1-.86-1.829V3.643c0-.723.33-1.37.859-1.83zM14.852 13.06l2.944 1.7-2.378 2.377-3.625-3.625 3.06-2.452zm3.677 2.12l3.395 1.96a1.186 1.186 0 0 1 0 2.054l-3.396 1.96-2.646-2.646 2.647-3.328zm-4.238-4.238L17.937 7.3l-3.396-1.96a1.186 1.186 0 0 0 0-2.054L17.937.326l2.646 2.646-6.292 8.97zM4.67.855L14.29 5.41l-2.944 1.7L4.67.855z"/></svg>
+                        Google Play
+                    </a>
+                    <a class="download-btn btn-apple" href="https://apps.apple.com/app/idYOUR_APP_ID_2" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        App Store
+                    </a>
+                </div>
+            </div>
+            -->
+
+        </div>
+    </main>
+
+    <!-- ==================== 联系方式 ==================== -->
+    <section class="contact-section">
+        <p>Get in touch</p>
+        <a class="email-link" href="mailto:atomgames2016@gmail.com">atomgames2016@gmail.com</a>
+    </section>
+
+    <!-- ==================== 页脚 ==================== -->
+    <footer>
+        <p>&copy; 2026 GemRyx Studio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
