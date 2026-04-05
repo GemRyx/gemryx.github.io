@@ -236,6 +236,28 @@
             font-size: 0.8rem;
         }
 
+        /* 法律文档链接（隐私政策 / 服务条款） */
+        footer .legal-links {
+            margin-bottom: 14px;
+            font-size: 0.9rem;
+        }
+
+        footer .legal-links a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        footer .legal-links a:hover {
+            color: #66e5ff;
+            text-decoration: underline;
+        }
+
+        footer .legal-links .sep {
+            color: #444444;
+            margin: 0 10px;
+        }
+
         /* ========== 响应式适配 ========== */
         @media (max-width: 640px) {
             header h1 {
@@ -344,11 +366,16 @@
     <!-- ==================== 联系方式 ==================== -->
     <section class="contact-section">
         <p>Get in touch</p>
-        <a class="email-link" href="mailto:atomgames2016@gmail.com">atomgames2016@gmail.com</a>
+        <a class="email-link" href="mailto:atomgame2016@gmail.com">atomgame2016@gmail.com</a>
     </section>
 
     <!-- ==================== 页脚 ==================== -->
     <footer>
+        <p class="legal-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <span class="sep" aria-hidden="true">·</span>
+            <a href="terms.html">Terms of Service</a>
+        </p>
         <p>&copy; 2026 GemRyx Studio. All rights reserved.</p>
     </footer>
 
