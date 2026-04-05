@@ -159,6 +159,32 @@
             opacity: 0.85;
         }
 
+        /* CrazyGames：主推广，高亮品牌橙 */
+        .btn-crazygames {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: #ffffff;
+            box-shadow: 0 2px 14px rgba(247, 147, 30, 0.4);
+        }
+
+        .btn-crazygames:hover {
+            opacity: 1;
+            box-shadow: 0 4px 20px rgba(247, 147, 30, 0.55);
+        }
+
+        /* 暂未上架：置灰、不可点击（上线后去掉 download-btn-muted 并填真实链接） */
+        .download-btn-muted {
+            opacity: 0.4;
+            filter: grayscale(0.9);
+            cursor: not-allowed;
+            pointer-events: none;
+            background: #2a2a2a !important;
+            color: #666666 !important;
+        }
+
+        .download-btn-muted:hover {
+            opacity: 0.4;
+        }
+
         /* Google Play 按钮 */
         .btn-google {
             background: #1a7a1a;
@@ -274,13 +300,13 @@
                         <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.372 2.372 0 0 1-.86-1.829V3.643c0-.723.33-1.37.859-1.83zM14.852 13.06l2.944 1.7-2.378 2.377-3.625-3.625 3.06-2.452zm3.677 2.12l3.395 1.96a1.186 1.186 0 0 1 0 2.054l-3.396 1.96-2.646-2.646 2.647-3.328zm-4.238-4.238L17.937 7.3l-3.396-1.96a1.186 1.186 0 0 0 0-2.054L17.937.326l2.646 2.646-6.292 8.97zM4.67.855L14.29 5.41l-2.944 1.7L4.67.855z"/></svg>
                         CrazyGames
                     </a>
-                    <!-- 替换 href 为实际 Google Play 链接 -->
-                    <a class="download-btn btn-google" href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME" target="_blank" rel="noopener">
+                    <!-- 替换 href 为实际 Google Play 链接；上线后移除 download-btn-muted -->
+                    <a class="download-btn btn-google download-btn-muted" href="#" aria-disabled="true" title="即将上线">
                         <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.372 2.372 0 0 1-.86-1.829V3.643c0-.723.33-1.37.859-1.83zM14.852 13.06l2.944 1.7-2.378 2.377-3.625-3.625 3.06-2.452zm3.677 2.12l3.395 1.96a1.186 1.186 0 0 1 0 2.054l-3.396 1.96-2.646-2.646 2.647-3.328zm-4.238-4.238L17.937 7.3l-3.396-1.96a1.186 1.186 0 0 0 0-2.054L17.937.326l2.646 2.646-6.292 8.97zM4.67.855L14.29 5.41l-2.944 1.7L4.67.855z"/></svg>
                         Google Play
                     </a>
-                    <!-- 替换 href 为实际 App Store 链接 -->
-                    <a class="download-btn btn-apple" href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" rel="noopener">
+                    <!-- 替换 href 为实际 App Store 链接；上线后移除 download-btn-muted -->
+                    <a class="download-btn btn-apple download-btn-muted" href="#" aria-disabled="true" title="即将上线">
                         <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                         App Store
                     </a>
