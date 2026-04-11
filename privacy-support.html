@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemRyx Games - User Data & Privacy Support</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        [data-lang]:not([data-lang="en"]) {
+            display: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Language Switcher / 语言切换 -->
+    <div class="fixed top-4 right-4 z-50">
+        <select id="langSelector" class="bg-slate-800 text-slate-200 border border-slate-700 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer">
+            <option value="en">English</option>
+            <option value="zh">简体中文</option>
+            <option value="ru">Русский</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+        </select>
+    </div>
+
+    <!-- Header / 头部 -->
+    <header class="py-12 px-4 text-center border-b border-slate-800">
+        <h1 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
+            GemRyx Games
+        </h1>
+        <p class="mt-4 text-xl text-slate-400 font-light" data-lang="en">User Data & Privacy Support</p>
+        <p class="mt-4 text-xl text-slate-400 font-light" data-lang="zh">用户数据与隐私支持</p>
+        <p class="mt-4 text-xl text-slate-400 font-light" data-lang="ru">Поддержка данных пользователя и конфиденциальности</p>
+        <p class="mt-4 text-xl text-slate-400 font-light" data-lang="fr">Support des données utilisateur et confidentialité</p>
+        <p class="mt-4 text-xl text-slate-400 font-light" data-lang="ko">사용자 데이터 및 개인정보 보호 지원</p>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-12 max-w-4xl">
+        
+        <!-- General Statement / 通用声明 -->
+        <section class="mb-12 glass-card p-8 rounded-2xl">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="en">Privacy Commitment</h2>
+            <h2 class="text-2xl font-semibold mb-4 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="zh">隐私承诺</h2>
+            <h2 class="text-2xl font-semibold mb-4 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="ru">Обязательства по конфиденциальности</h2>
+            <h2 class="text-2xl font-semibold mb-4 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="fr">Engagement de confidentialité</h2>
+            <h2 class="text-2xl font-semibold mb-4 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="ko">개인정보 보호 약속</h2>
+
+            <div class="space-y-4 text-slate-300">
+                <div data-lang="en">
+                    <p>At GemRyx Games, we take your privacy seriously. We are committed to ensuring the security and transparency of user data across all our titles.</p>
+                </div>
+                <div data-lang="zh">
+                    <p>在 GemRyx Games，我们高度重视您的隐私。我们致力于保护所有游戏作品中用户数据的安全与透明。</p>
+                </div>
+                <div data-lang="ru">
+                    <p>В GemRyx Games мы серьезно относимся к вашей конфиденциальности. Мы стремимся обеспечить безопасность и прозрачность пользовательских данных во всех наших играх.</p>
+                </div>
+                <div data-lang="fr">
+                    <p>Chez GemRyx Games, nous prenons votre vie privée au sérieux. Nous nous engageons à assurer la sécurité et la transparence des données utilisateur dans tous nos titres.</p>
+                </div>
+                <div data-lang="ko">
+                    <p>GemRyx Games는 사용자의 개인정보를 소중히 여깁니다. 당사는 모든 게임 타이틀에서 사용자 데이터의 보안과 투명성을 보장하기 위해 최선을 다하고 있습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Request / 如何申请 -->
+        <section class="mb-12 glass-card p-8 rounded-2xl">
+            <h2 class="text-2xl font-semibold mb-6 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="en">How to Request Data Deletion</h2>
+            <h2 class="text-2xl font-semibold mb-6 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="zh">如何申请删除数据</h2>
+            <h2 class="text-2xl font-semibold mb-6 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="ru">Как запросить удаление данных</h2>
+            <h2 class="text-2xl font-semibold mb-6 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="fr">Comment demander la suppression des données</h2>
+            <h2 class="text-2xl font-semibold mb-6 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="ko">데이터 삭제 요청 방법</h2>
+            
+            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 mb-6">
+                <p class="mb-4 font-medium text-white" data-lang="en">Please contact us via email:</p>
+                <p class="mb-4 font-medium text-white" data-lang="zh">请通过电子邮件联系我们：</p>
+                <p class="mb-4 font-medium text-white" data-lang="ru">Пожалуйста, свяжитесь с нами по электронной почте:</p>
+                <p class="mb-4 font-medium text-white" data-lang="fr">Veuillez nous contacter par e-mail :</p>
+                <p class="mb-4 font-medium text-white" data-lang="ko">이메일로 문의해 주세요:</p>
+                
+                <a href="mailto:atomgame2016@gmail.com" class="text-xl md:text-2xl text-emerald-400 hover:text-emerald-300 transition-colors break-all">
+                    atomgame2016@gmail.com
+                </a>
+            </div>
+
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <div class="bg-blue-500/20 p-2 rounded-lg mr-4 mt-1">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-white font-medium" data-lang="en">Crucial:</p>
+                        <p class="text-white font-medium" data-lang="zh">重要提示：</p>
+                        <p class="text-white font-medium" data-lang="ru">Важно:</p>
+                        <p class="text-white font-medium" data-lang="fr">Crucial :</p>
+                        <p class="text-white font-medium" data-lang="ko">중요:</p>
+
+                        <p class="text-slate-400" data-lang="en">Please specify the <strong>Game Name</strong> (e.g., DRONE WAR) in your email so we can identify the correct data.</p>
+                        <p class="text-slate-400" data-lang="zh">请在邮件中明确指出您所玩的游戏名称（例如：DRONE WAR），以便我们准确识别您的数据。</p>
+                        <p class="text-slate-400" data-lang="ru">Пожалуйста, укажите <strong>название игры</strong> (например, DRONE WAR) в своем электронном письме, чтобы мы могли идентифицировать правильные данные.</p>
+                        <p class="text-slate-400" data-lang="fr">Veuillez spécifier le <strong>nom du jeu</strong> (par ex., DRONE WAR) dans votre e-mail afin que nous puissions identifier les données correctes.</p>
+                        <p class="text-slate-400" data-lang="ko">정확한 데이터를 식별할 수 있도록 이메일에 <strong>게임 이름</strong>(예: DRONE WAR)을 명시해 주세요.</p>
+                    </div>
+                </div>
+
+                <div class="border-t border-slate-700 pt-6">
+                    <p class="text-white font-medium mb-2" data-lang="en">Data Scope:</p>
+                    <p class="text-white font-medium mb-2" data-lang="zh">数据删除范围：</p>
+                    <p class="text-white font-medium mb-2" data-lang="ru">Объем данных:</p>
+                    <p class="text-white font-medium mb-2" data-lang="fr">Portée des données :</p>
+                    <p class="text-white font-medium mb-2" data-lang="ko">데이터 범위:</p>
+
+                    <ul class="list-disc list-inside text-slate-400 space-y-1 ml-2">
+                        <li data-lang="en">Cloud Saves</li>
+                        <li data-lang="zh">云端存档</li>
+                        <li data-lang="ru">Облачные сохранения</li>
+                        <li data-lang="fr">Sauvegardes dans le cloud</li>
+                        <li data-lang="ko">클라우드 저장 데이터</li>
+
+                        <li data-lang="en">Leaderboard Scores</li>
+                        <li data-lang="zh">排行榜分数</li>
+                        <li data-lang="ru">Очки в таблице лидеров</li>
+                        <li data-lang="fr">Scores des classements</li>
+                        <li data-lang="ko">리더보드 점수</li>
+
+                        <li data-lang="en">Achievement Progress</li>
+                        <li data-lang="zh">成就进度</li>
+                        <li data-lang="ru">Прогресс достижений</li>
+                        <li data-lang="fr">Progression des succès</li>
+                        <li data-lang="ko">업적 진행 상황</li>
+
+                        <li data-lang="en">Analytics Data</li>
+                        <li data-lang="zh">分析数据</li>
+                        <li data-lang="ru">Аналитические данные</li>
+                        <li data-lang="fr">Données analytiques</li>
+                        <li data-lang="ko">분석 데이터</li>
+                    </ul>
+                </div>
+
+                <div class="border-t border-slate-700 pt-6">
+                    <p class="text-white font-medium mb-2" data-lang="en">Processing Time:</p>
+                    <p class="text-white font-medium mb-2" data-lang="zh">处理时间：</p>
+                    <p class="text-white font-medium mb-2" data-lang="ru">Время обработки:</p>
+                    <p class="text-white font-medium mb-2" data-lang="fr">Délai de traitement :</p>
+                    <p class="text-white font-medium mb-2" data-lang="ko">처리 시간:</p>
+
+                    <p class="text-slate-400" data-lang="en">Standard processing time is 7 business days.</p>
+                    <p class="text-slate-400" data-lang="zh">标准处理时间为 7 个工作日。</p>
+                    <p class="text-slate-400" data-lang="ru">Стандартное время обработки составляет 7 рабочих дней.</p>
+                    <p class="text-slate-400" data-lang="fr">Le délai de traitement standard est de 7 jours ouvrables.</p>
+                    <p class="text-slate-400" data-lang="ko">표준 처리 기간은 영업일 기준 7일입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Self-Service Guide / 自助指南 -->
+        <section class="mb-12 glass-card p-8 rounded-2xl">
+            <h2 class="text-2xl font-semibold mb-6 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="en">Universal Self-Service Guide</h2>
+            <h2 class="text-2xl font-semibold mb-6 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="zh">Android 自助删除指南</h2>
+            <h2 class="text-2xl font-semibold mb-6 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="ru">Универсальное руководство по самообслуживанию</h2>
+            <h2 class="text-2xl font-semibold mb-6 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="fr">Guide de libre-service universel</h2>
+            <h2 class="text-2xl font-semibold mb-6 text-blue-400 border-l-4 border-blue-500 pl-4" data-lang="ko">범용 셀프 서비스 가이드</h2>
+
+            <p class="text-slate-300 mb-6" data-lang="en">For games using Google Play Games Services (GPGS), you can manage your data yourself by following these steps:</p>
+            <p class="text-slate-300 mb-6" data-lang="zh">对于使用 Google Play 游戏服务（GPGS）的游戏，您可以按照以下标准步骤自行管理数据：</p>
+            <p class="text-slate-300 mb-6" data-lang="ru">Для игр, использующих игровые сервисы Google Play (GPGS), вы можете самостоятельно управлять своими данными, выполнив следующие действия:</p>
+            <p class="text-slate-300 mb-6" data-lang="fr">Pour les jeux utilisant les services de jeux Google Play (GPGS), vous pouvez gérer vos données vous-même en suivant ces étapes :</p>
+            <p class="text-slate-300 mb-6" data-lang="ko">Google Play 게임 서비스(GPGS)를 사용하는 게임의 경우 다음 단계에 따라 직접 데이터를 관리할 수 있습니다.</p>
+            
+            <div class="space-y-4 text-slate-400">
+                <div class="bg-slate-900/50 p-4 rounded-lg">
+                    <ol class="list-decimal list-inside space-y-3" data-lang="en">
+                        <li>Open the <span class="text-white font-medium">Play Games</span> app on your Android device.</li>
+                        <li>Tap the three dots in the top right and select <span class="text-white font-medium">Settings</span>.</li>
+                        <li>Scroll down and tap <span class="text-white font-medium">Delete Play Games account & data</span>.</li>
+                        <li>Under "Delete individual game data", find the game (e.g., DRONE WAR) and tap <span class="text-white font-medium">Delete</span>.</li>
+                    </ol>
+                    <ol class="list-decimal list-inside space-y-3" data-lang="zh">
+                        <li>打开手机上的 <span class="text-white font-medium">“Play 游戏”</span> 应用。</li>
+                        <li>点击右上角的三个点图标，选择 <span class="text-white font-medium">“设置”</span>。</li>
+                        <li>向下滚动并点击 <span class="text-white font-medium">“删除 Play 游戏账号和数据”</span>。</li>
+                        <li>在“删除单个游戏的数据”下，找到对应的游戏（如 DRONE WAR）并点击 <span class="text-white font-medium">“删除”</span>。</li>
+                    </ol>
+                    <ol class="list-decimal list-inside space-y-3" data-lang="ru">
+                        <li>Откройте приложение <span class="text-white font-medium">Play Игры</span> на своем устройстве Android.</li>
+                        <li>Нажмите на три точки в правом верхнем углу и выберите <span class="text-white font-medium">Настройки</span>.</li>
+                        <li>Прокрутите вниз и нажмите <span class="text-white font-medium">Удалить аккаунт Play Игр и данные</span>.</li>
+                        <li>В разделе «Удалить данные отдельных игр» найдите нужную игру (например, DRONE WAR) и нажмите <span class="text-white font-medium">Удалить</span>.</li>
+                    </ol>
+                    <ol class="list-decimal list-inside space-y-3" data-lang="fr">
+                        <li>Ouvrez l'application <span class="text-white font-medium">Play Jeux</span> sur votre appareil Android.</li>
+                        <li>Appuyez sur les trois points en haut à droite et sélectionnez <span class="text-white font-medium">Paramètres</span>.</li>
+                        <li>Faites défiler vers le bas et appuyez sur <span class="text-white font-medium">Supprimer le compte et les données Play Jeux</span>.</li>
+                        <li>Sous "Supprimer les données d'un jeu spécifique", recherchez le jeu (par ex., DRONE WAR) et appuyez sur <span class="text-white font-medium">Supprimer</span>.</li>
+                    </ol>
+                    <ol class="list-decimal list-inside space-y-3" data-lang="ko">
+                        <li>Android 기기에서 <span class="text-white font-medium">Play 게임</span> 앱을 엽니다.</li>
+                        <li>오른쪽 상단의 점 3개를 누르고 <span class="text-white font-medium">설정</span>을 선택합니다.</li>
+                        <li>아래로 스크롤하여 <span class="text-white font-medium">Play 게임 계정 및 데이터 삭제</span>를 누릅니다.</li>
+                        <li>'개별 게임 데이터 삭제'에서 해당 게임(예: DRONE WAR)을 찾아 <span class="text-white font-medium">삭제</span>를 누릅니다.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / 底部 -->
+    <footer class="py-8 text-center border-t border-slate-800 text-slate-500 text-sm">
+        <p>&copy; 2026 GemRyx Games. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const langSelector = document.getElementById('langSelector');
+        const langElements = document.querySelectorAll('[data-lang]');
+
+        langSelector.addEventListener('change', (e) => {
+            const selectedLang = e.target.value;
+            langElements.forEach(el => {
+                if (el.getAttribute('data-lang') === selectedLang) {
+                    el.style.display = el.tagName === 'P' || el.tagName === 'DIV' || el.tagName === 'H2' || el.tagName === 'LI' || el.tagName === 'OL' ? 'block' : 'inline';
+                    if (el.tagName === 'LI') el.style.display = 'list-item';
+                } else {
+                    el.style.display = 'none';
+                }
+            });
+            document.documentElement.lang = selectedLang;
+        });
+    </script>
+</body>
+</html>
