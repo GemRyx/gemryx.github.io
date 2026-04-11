@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRONE WAR - Credits & Acknowledgments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        [data-lang]:not([data-lang="en"]) {
+            display: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Language Switcher / 语言切换 -->
+    <div class="fixed top-4 right-4 z-50">
+        <select id="langSelector" class="bg-slate-800 text-slate-200 border border-slate-700 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer shadow-lg">
+            <option value="en">English</option>
+            <option value="zh">简体中文</option>
+            <option value="ru">Русский</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+        </select>
+    </div>
+
+    <!-- Header / 头部 -->
+    <header class="py-16 px-4 text-center border-b border-slate-800">
+        <h1 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+            DRONE WAR
+        </h1>
+        <p class="mt-4 text-xl text-slate-400 font-light" data-lang="en">Credits & Acknowledgments</p>
+        <p class="mt-4 text-xl text-slate-400 font-light" data-lang="zh">致谢与版权声明</p>
+        <p class="mt-4 text-xl text-slate-400 font-light" data-lang="ru">Благодарности и признательность</p>
+        <p class="mt-4 text-xl text-slate-400 font-light" data-lang="fr">Crédits et Remerciements</p>
+        <p class="mt-4 text-xl text-slate-400 font-light" data-lang="ko">제작진 및 감사의 글</p>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-12 max-w-4xl">
+        
+        <!-- Heartfelt Message / 诚挚声明 -->
+        <section class="mb-12 glass-card p-8 rounded-2xl border-t-4 border-blue-500">
+            <div class="space-y-6 text-lg leading-relaxed text-slate-300">
+                <!-- English -->
+                <div data-lang="en" class="space-y-4">
+                    <p>Building <strong>DRONE WAR</strong> has been a journey of passion, and we couldn't have done it without the incredible resources shared by the global creative community.</p>
+                    <p>We use various third-party assets (3D models, textures, sounds, etc.) under their respective licenses (CC0, CC-BY, and others) to the best of our knowledge. However, we know that sometimes credits can get lost in the process.</p>
+                    <p class="text-blue-300"><strong>If you are a creator</strong> and find your work is missing a specific credit, or if you believe an asset is used improperly, please reach out to us. We deeply respect your intellectual property and will update or remove the content immediately upon request.</p>
+                </div>
+                <!-- Chinese -->
+                <div data-lang="zh" class="space-y-4">
+                    <p>开发 <strong>DRONE WAR</strong> 是一段充满激情的旅程，如果没有全球创意社区分享的优秀资源，我们无法完成它。</p>
+                    <p>我们在尽可能了解的情况下，根据各自的许可协议（CC0、CC-BY 等）使用了各种第三方素材（3D模型、贴图、音效等）。但我们深知在开发过程中，有时可能会遗漏具体的署名信息。</p>
+                    <p class="text-blue-300"><strong>如果您是创作者</strong>，发现您的作品未被正确标注，或者认为素材使用不当，请务必联系我们。我们非常尊重您的知识产权，并将根据您的要求立即更新信息或删除相关内容。</p>
+                </div>
+                <!-- Russian -->
+                <div data-lang="ru" class="space-y-4">
+                    <p>Создание <strong>DRONE WAR</strong> было делом страсти, и мы не смогли бы сделать это без невероятных ресурсов, которыми делится мировое творческое сообщество.</p>
+                    <p>Мы используем различные сторонние ассеты (3D-модели, текстуры, звуки и т.д.) в соответствии с их лицензиями (CC0, CC-BY и др.). Однако мы понимаем, что иногда информация об авторстве может быть утеряна.</p>
+                    <p class="text-blue-300"><strong>Если вы являетесь автором</strong> и обнаружили, что ваша работа не указана должным образом, или считаете, что ассет используется неправильно, пожалуйста, свяжитесь с нами. Мы глубоко уважаем вашу интеллектуальную собственность и немедленно обновим информацию или удалим контент по вашему запросу.</p>
+                </div>
+                <!-- French -->
+                <div data-lang="fr" class="space-y-4">
+                    <p>La création de <strong>DRONE WAR</strong> a été une aventure passionnante, et nous n'aurions pas pu la réaliser sans les ressources incroyables partagées par la communauté créative mondiale.</p>
+                    <p>Nous utilisons divers éléments tiers (modèles 3D, textures, sons, etc.) sous leurs licences respectives (CC0, CC-BY, etc.) au mieux de nos connaissances. Cependant, nous savons que les crédits peuvent parfois être oubliés.</p>
+                    <p class="text-blue-300"><strong>Si vous êtes un créateur</strong> et que vous constatez que votre travail manque d'un crédit spécifique, ou si vous pensez qu'un élément est utilisé de manière inappropriée, n'hésitez pas à nous contacter. Nous respectons profondément votre propriété intellectuelle et mettrons à jour ou supprimerons le contenu immédiatement sur demande.</p>
+                </div>
+                <!-- Korean -->
+                <div data-lang="ko" class="space-y-4">
+                    <p><strong>DRONE WAR</strong> 개발은 열정의 여정이었으며, 전 세계 크리에이티브 커뮤니티가 공유해준 놀라운 리소스 없이는 불가능했을 것입니다.</p>
+                    <p>당사는 당사가 아는 한 각 라이선스(CC0, CC-BY 등)에 따라 다양한 제3자 에셋(3D 모델, 텍스처, 사운드 등)을 사용하고 있습니다. 하지만 개발 과정에서 때때로 크레딧 정보가 누락될 수 있음을 인지하고 있습니다.</p>
+                    <p class="text-blue-300"><strong>만약 귀하가 창작자</strong>이시고 귀하의 저작물에 대한 특정 크레딧이 누락되었거나 에셋이 부적절하게 사용되었다고 판단되는 경우, 주저하지 말고 저희에게 연락해 주십시오. 당사는 귀하의 지적 재산권을 깊이 존중하며, 요청 시 즉시 내용을 업데이트하거나 삭제하겠습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Email / 邮箱（醒目） -->
+        <section class="mb-12 text-center">
+            <p class="text-slate-400 mb-4" data-lang="en">Contact us at:</p>
+            <p class="text-slate-400 mb-4" data-lang="zh">请通过以下邮箱联系我们：</p>
+            <p class="text-slate-400 mb-4" data-lang="ru">Свяжитесь с нами по адресу:</p>
+            <p class="text-slate-400 mb-4" data-lang="fr">Contactez-nous à :</p>
+            <p class="text-slate-400 mb-4" data-lang="ko">다음 이메일로 연락주세요:</p>
+            
+            <a href="mailto:atomgame2016@gmail.com" class="text-3xl md:text-5xl font-bold text-emerald-400 hover:text-emerald-300 transition-all border-b-2 border-emerald-500/30 pb-2">
+                atomgame2016@gmail.com
+            </a>
+        </section>
+
+        <!-- Credits List Template / 致谢名单模板 -->
+        <section class="glass-card p-8 rounded-2xl">
+            <h3 class="text-xl font-semibold mb-8 text-slate-200 border-b border-slate-700 pb-4" data-lang="en">Special Thanks to</h3>
+            <h3 class="text-xl font-semibold mb-8 text-slate-200 border-b border-slate-700 pb-4" data-lang="zh">特别鸣谢</h3>
+            <h3 class="text-xl font-semibold mb-8 text-slate-200 border-b border-slate-700 pb-4" data-lang="ru">Особая благодарность</h3>
+            <h3 class="text-xl font-semibold mb-8 text-slate-200 border-b border-slate-700 pb-4" data-lang="fr">Remerciements particuliers à</h3>
+            <h3 class="text-xl font-semibold mb-8 text-slate-200 border-b border-slate-700 pb-4" data-lang="ko">특별히 감사드리는 분들</h3>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-slate-400">
+                <!-- 姓名列表模板 / Name List Template -->
+                <div class="p-3 bg-slate-800/30 rounded-lg border border-slate-700/50 text-center">
+                    <p class="text-white font-medium">RescopicSound</p>
+                </div>
+                <div class="p-3 bg-slate-800/30 rounded-lg border border-slate-700/50 text-center">
+                    <p class="text-white font-medium">u_wxn5lzrjy3</p>
+                </div>
+                <div class="p-3 bg-slate-800/30 rounded-lg border border-slate-700/50 text-center">
+                    <p class="text-white font-medium">VoiceBosch</p>
+                </div>
+                <div class="p-3 bg-slate-800/30 rounded-lg border border-slate-700/50 text-center">
+                    <p class="text-white font-medium">PaulYudin</p>
+                </div>
+                <div class="p-3 bg-slate-800/30 rounded-lg border border-slate-700/50 text-center">
+                    <p class="text-white font-medium">OpenMindAudio</p>
+                </div>
+                <div class="p-3 bg-slate-800/30 rounded-lg border border-slate-700/50 text-center">
+                    <p class="text-white font-medium">beetpro</p>
+                </div>
+                <div class="p-3 bg-slate-800/30 rounded-lg border border-slate-700/50 text-center">
+                    <p class="text-white font-medium">Muhamad Mirza Arrafi</p>
+                </div>
+                <div class="p-3 bg-slate-800/30 rounded-lg border border-slate-700/50 text-center">
+                    <p class="text-white font-medium">Viktor_</p>
+                </div>
+                <div class="p-3 bg-slate-800/30 rounded-lg border border-slate-700/50 text-center italic">
+                    <p class="text-slate-500">And more...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / 底部 -->
+    <footer class="py-8 text-center border-t border-slate-800 text-slate-500 text-sm">
+        <p>&copy; 2026 GemRyx Games. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const langSelector = document.getElementById('langSelector');
+        const langElements = document.querySelectorAll('[data-lang]');
+
+        langSelector.addEventListener('change', (e) => {
+            const selectedLang = e.target.value;
+            langElements.forEach(el => {
+                const isMatch = el.getAttribute('data-lang') === selectedLang;
+                if (isMatch) {
+                    // Handle different display types
+                    if (el.tagName === 'P' || el.tagName === 'DIV' || el.tagName === 'H2' || el.tagName === 'H3') {
+                        el.style.display = 'block';
+                    } else {
+                        el.style.display = 'inline';
+                    }
+                } else {
+                    el.style.display = 'none';
+                }
+            });
+            document.documentElement.lang = selectedLang;
+        });
+    </script>
+</body>
+</html>
