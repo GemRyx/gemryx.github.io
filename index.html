@@ -97,6 +97,21 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .game-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: var(--icon-bg);
+            background-size: cover;
+            background-position: center;
+            opacity: 0.06;
+            filter: blur(10px);
+            z-index: -1;
         }
 
         .game-card:hover {
@@ -294,7 +309,7 @@
             -->
 
             <!-- 游戏卡片 1：示例（请替换为实际游戏信息） -->
-            <div class="game-card">
+            <div class="game-card" style="--icon-bg: url('images/DroneWar.png')">
                 <!-- 替换 src 为实际游戏图标路径，例如 images/game1-icon.png -->
                 <img class="game-icon" src="images/DroneWar.png" alt="Game 1 Icon">
                 <!-- 替换为实际游戏名称 -->
@@ -312,13 +327,16 @@
             </div>
 
             <!-- 游戏卡片 2：CoverShooter -->
-            <div class="game-card">
+            <div class="game-card" style="--icon-bg: url('images/CoverShooter.png')">
                 <img class="game-icon" src="images/CoverShooter.png" alt="CoverShooter Icon">
-                <h3>CoverShooter</h3>
+                <h3>Cover Shooter</h3>
                 <p class="game-desc">CoverShooter is a tactical shooter where you use cover to outmaneuver and eliminate enemies.</p>
                 <div class="download-links">
                     <a class="download-btn btn-google" href="https://play.google.com/store/apps/details?id=com.gemryx.covershooter" target="_blank" rel="noopener">
                         Google Play
+                    </a>
+                    <a class="download-btn btn-apple download-btn-muted" href="#" aria-disabled="true" title="即将上线">
+                        App Store
                     </a>
                 </div>
             </div>
